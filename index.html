@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DC Family Retreat, Khao Yai, 15 to 19 October 2026</title>
+<meta name="description" content="A few DC families, one glamping resort in Khao Yai, four days before DCBKK. Go-karts, campfires and kids who already know each other when the conference starts.">
+<meta property="og:title" content="DC Family Retreat, Khao Yai, 15 to 19 October">
+<meta property="og:description" content="A few DC families, one glamping resort, four days before DCBKK.">
+<meta property="og:image" content="https://simonsimya.github.io/khao-yai-retreat/img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1f3a2d;
+    --moss: #3f6b4f;
+    --cream: #f7f1e5;
+    --sand: #ece2cf;
+    --ember: #e2662b;
+    --ink: #1c221e;
+    --muted: #5d6a60;
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; line-height: 1.1; margin: 0; letter-spacing: -0.01em; }
+  h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 600; }
+  h3 { font-size: 1.3rem; font-weight: 600; }
+  p { margin: 0; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .eyebrow {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ember);
+    margin-bottom: 14px;
+  }
+  .lead { font-size: 1.15rem; color: var(--muted); max-width: 620px; margin-top: 18px; }
+  section { padding: 96px 0; }
+
+  /* Hero */
+  .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; color: #fff; padding: 0; }
+  .hero img { position: absolute; inset: 0; }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(15,28,21,0.35) 0%, rgba(15,28,21,0.05) 35%, rgba(15,28,21,0.82) 100%);
+  }
+  .hero .wrap { position: relative; z-index: 1; width: 100%; padding-bottom: 72px; padding-top: 120px; }
+  .badge {
+    display: inline-block; padding: 8px 16px; border-radius: 999px; font-size: 0.82rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    background: rgba(255,255,255,0.16); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.35);
+  }
+  .hero h1 { font-size: clamp(2.8rem, 8vw, 6rem); font-weight: 700; margin: 22px 0 18px; max-width: 900px; }
+  .hero p { font-size: clamp(1.05rem, 2vw, 1.35rem); max-width: 620px; opacity: 0.95; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+  .btn {
+    display: inline-block; padding: 16px 30px; border-radius: 999px; font-weight: 600; text-decoration: none;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--ember); color: #fff; }
+  .btn-primary:hover { background: #cf5820; }
+  .btn-ghost { color: #fff; border: 1px solid rgba(255,255,255,0.55); }
+
+  /* Facts strip */
+  .facts { background: var(--forest); color: var(--cream); padding: 0; }
+  .facts .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .fact { padding: 34px 20px; border-left: 1px solid rgba(255,255,255,0.12); }
+  .fact:first-child { border-left: 0; padding-left: 0; }
+  .fact small { display: block; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.65; margin-bottom: 8px; }
+  .fact strong { font-family: Fraunces, Georgia, serif; font-size: 1.35rem; font-weight: 600; display: block; line-height: 1.2; }
+  .fact span { font-size: 0.9rem; opacity: 0.75; }
+
+  /* Why */
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
+  .card { background: #fff; border-radius: var(--radius); padding: 32px 28px; box-shadow: 0 1px 2px rgba(31,58,45,0.06), 0 12px 32px rgba(31,58,45,0.06); }
+  .card .num { font-family: Fraunces, Georgia, serif; font-size: 2.2rem; color: var(--ember); line-height: 1; margin-bottom: 16px; }
+  .card p { color: var(--muted); margin-top: 10px; }
+
+  /* Kids gallery */
+  .kids { background: var(--sand); }
+  .gallery { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 150px; gap: 14px; margin-top: 48px; }
+  .tile { position: relative; overflow: hidden; border-radius: var(--radius); background: #d9cfba; }
+  .tile img { transition: transform 0.6s ease; }
+  .tile:hover img { transform: scale(1.04); }
+  .tile figcaption {
+    position: absolute; left: 14px; bottom: 14px; padding: 7px 14px; border-radius: 999px;
+    background: rgba(255,255,255,0.92); font-size: 0.85rem; font-weight: 600; color: var(--forest);
+  }
+  figure { margin: 0; }
+  .g1 { grid-column: span 7; grid-row: span 3; }
+  .g2 { grid-column: span 5; grid-row: span 3; }
+  .g3 { grid-column: span 4; grid-row: span 2; }
+  .g4 { grid-column: span 4; grid-row: span 2; }
+  .g5 { grid-column: span 4; grid-row: span 2; }
+  .g6 { grid-column: span 5; grid-row: span 3; }
+  .g7 { grid-column: span 7; grid-row: span 3; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+  .chip { padding: 9px 18px; border-radius: 999px; background: #fff; font-weight: 500; font-size: 0.95rem; }
+  .free { margin-top: 22px; font-weight: 600; color: var(--moss); }
+
+  /* Split sections */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .split.rev .media { order: 2; }
+  .media { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .media figure { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; }
+  .media figure.wide { grid-column: span 2; aspect-ratio: 16 / 9; }
+  .list { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+  .list li { padding-left: 30px; position: relative; }
+  .list li::before { content: ""; position: absolute; left: 0; top: 9px; width: 12px; height: 12px; border-radius: 50%; background: var(--ember); }
+  .list b { font-weight: 600; }
+
+  /* Night band */
+  .night { background: var(--forest); color: var(--cream); }
+  .night .lead { color: rgba(247,241,229,0.75); }
+  .night .list li { color: rgba(247,241,229,0.92); }
+
+  /* Stay */
+  .stay-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
+  .stay { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: 0 12px 32px rgba(31,58,45,0.07); }
+  .stay figure { aspect-ratio: 4 / 3; }
+  .stay div { padding: 24px 24px 28px; }
+  .stay p { color: var(--muted); margin-top: 8px; font-size: 0.97rem; }
+  .price { margin-top: 36px; padding: 26px 30px; border-radius: var(--radius); background: var(--sand); display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 18px; }
+  .price strong { font-family: Fraunces, Georgia, serif; font-size: 1.8rem; }
+  .price span { color: var(--muted); }
+
+  /* Plan */
+  .plan { background: var(--sand); }
+  .days { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 44px; }
+  .day { border-top: 3px solid var(--forest); padding-top: 20px; }
+  .day small { font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.75rem; color: var(--ember); }
+  .day h3 { margin: 8px 0 8px; }
+  .day p { color: var(--muted); }
+
+  /* Join */
+  .join { position: relative; color: #fff; text-align: center; padding: 130px 0; overflow: hidden; }
+  .join img { position: absolute; inset: 0; }
+  .join::after { content: ""; position: absolute; inset: 0; background: rgba(15,28,21,0.68); }
+  .join .wrap { position: relative; z-index: 1; max-width: 760px; }
+  .join h2 { font-size: clamp(2.2rem, 5.5vw, 4rem); }
+  .join p { font-size: 1.15rem; margin-top: 20px; opacity: 0.95; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 44px 0 0; text-align: left; }
+  .step { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); backdrop-filter: blur(8px); border-radius: var(--radius); padding: 22px; }
+  .step b { display: block; font-family: Fraunces, Georgia, serif; font-size: 1.6rem; color: #ffd9c4; margin-bottom: 6px; }
+
+  footer { background: var(--ink); color: rgba(247,241,229,0.7); padding: 40px 0; font-size: 0.9rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; }
+  footer a { color: var(--cream); }
+
+  @media (max-width: 860px) {
+    section { padding: 68px 0; }
+    .facts .wrap { grid-template-columns: 1fr 1fr; column-gap: 22px; }
+    .fact strong { font-size: 1.15rem; }
+    .fact { border-left: 0; padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.12); }
+    .fact:nth-child(-n+2) { border-top: 0; }
+    .why-grid, .stay-grid, .days, .steps { grid-template-columns: 1fr; }
+    .split { grid-template-columns: 1fr; gap: 36px; }
+    .split.rev .media { order: 0; }
+    .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 170px; }
+    .g1, .g7 { grid-column: span 2; grid-row: span 2; }
+    .g2, .g6 { grid-column: span 2; grid-row: span 2; }
+    .g3, .g4 { grid-column: span 1; grid-row: span 1; }
+    .g5 { grid-column: span 2; grid-row: span 1; }
+    .hero .wrap { padding-bottom: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="img/hero.jpg" alt="Sunset over the glamping tents and hills of Khao Yai">
+  <div class="wrap">
+    <span class="badge">DC Family Retreat · 15 to 19 October 2026</span>
+    <h1>Four days in the wild before DCBKK.</h1>
+    <p>A few DC families, one glamping resort in Khao Yai, zero agenda. The kids run free, the parents finally get a full conversation in.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#join">Count us in</a>
+      <a class="btn btn-ghost" href="#place">See the place</a>
+    </div>
+  </div>
+</header>
+
+<section class="facts">
+  <div class="wrap">
+    <div class="fact"><small>When</small><strong>15 to 19 October</strong><span>Thursday to Monday</span></div>
+    <div class="fact"><small>Where</small><strong>Khao Yai</strong><span>About 2.5 hours by car from Bangkok</span></div>
+    <div class="fact"><small>Stay</small><strong>฿2,200 to 4,500</strong><span>Roughly, per night</span></div>
+    <div class="fact"><small>Activities</small><strong>All included</strong><span>Go-karts, bikes, paddleboards and more</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Why come</div>
+    <h2>The best part of DCBKK, with your family in it.</h2>
+    <p class="lead">Conferences are great for you and a long week for everyone else. This is the other way round.</p>
+    <div class="why-grid">
+      <div class="card">
+        <div class="num">01</div>
+        <h3>Kids arrive with friends</h3>
+        <p>By the time the Kids' Night starts in Bangkok, yours already have a gang. That makes the whole conference week easier.</p>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h3>Real conversations</h3>
+        <p>Four slow evenings round a fire beat four rushed hallway chats. Same people you came to see, without the lanyards.</p>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h3>Land softly</h3>
+        <p>Flying in from far away? Shake off the jet lag in the hills instead of a hotel room, then drive down to Bangkok fresh.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kids" id="place">
+  <div class="wrap">
+    <div class="eyebrow">For the kids</div>
+    <h2>Sixty thousand square metres of yes.</h2>
+    <p class="lead">The Wild Khao Yai is a fenced resort built around things to do. Nobody will ask for a screen.</p>
+    <div class="gallery">
+      <figure class="tile g1"><img src="img/gokarts.jpg" alt="A fleet of kids' go-karts" loading="lazy"><figcaption>Go-karts</figcaption></figure>
+      <figure class="tile g2"><img src="img/paddle.jpg" alt="Paddleboarding on the resort pond" loading="lazy"><figcaption>Paddleboards</figcaption></figure>
+      <figure class="tile g3"><img src="img/playground.jpg" alt="Wooden playground on sand" loading="lazy"><figcaption>Playground</figcaption></figure>
+      <figure class="tile g4"><img src="img/bikes.jpg" alt="Rows of kids' bikes" loading="lazy"><figcaption>Bikes</figcaption></figure>
+      <figure class="tile g5"><img src="img/trike.jpg" alt="Kids riding a tricycle together" loading="lazy"><figcaption>Room to roam</figcaption></figure>
+      <figure class="tile g6"><img src="img/boardgames.jpg" alt="Shelf full of board games" loading="lazy"><figcaption>Board games</figcaption></figure>
+      <figure class="tile g7"><img src="img/field.jpg" alt="Football field under big trees" loading="lazy"><figcaption>The field</figcaption></figure>
+    </div>
+    <div class="chips">
+      <span class="chip">Go-karts</span><span class="chip">Bicycles</span><span class="chip">Paddleboards</span><span class="chip">Surf skates</span><span class="chip">Archery</span><span class="chip">Playground</span><span class="chip">Telescope</span><span class="chip">Campfire</span><span class="chip">Board games</span>
+    </div>
+    <p class="free">Every activity is free of charge for guests.</p>
+  </div>
+</section>
+
+<section class="night">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">For the grown-ups</div>
+      <h2>Fire, food and time to talk.</h2>
+      <p class="lead">Once the kids are worn out, the evening is yours.</p>
+      <ul class="list">
+        <li><b>Campfire in the evenings.</b> Bring marshmallows.</li>
+        <li><b>BBQ dinner at your tent.</b> There is a dining area in front of every unit.</li>
+        <li><b>Breakfast at the Bears Tavern.</b> Coffee first, plans later.</li>
+        <li><b>A proper gym,</b> open 7:00 to 22:00, plus in-room massage on request.</li>
+        <li><b>Wifi across the site,</b> for the one call you could not move.</li>
+      </ul>
+    </div>
+    <div class="media">
+      <figure class="wide"><img src="img/lights.jpg" alt="Dinner under string lights" loading="lazy"></figure>
+      <figure><img src="img/campfire.jpg" alt="Campfire at dusk" loading="lazy"></figure>
+      <figure><img src="img/bbq.jpg" alt="BBQ skewers on the grill" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Where you sleep</div>
+    <h2>Camping, minus everything you hate about camping.</h2>
+    <p class="lead">Real beds, air conditioning, hot rain showers. The idea is to book side by side so the kids can run between tents.</p>
+    <div class="stay-grid">
+      <div class="stay">
+        <figure><img src="img/tent-inside.jpg" alt="Inside a glamping tent with two queen beds" loading="lazy"></figure>
+        <div><h3>Glamping tents</h3><p>About 20 square metres, two queen beds, air conditioning, fridge and a private bathroom.</p></div>
+      </div>
+      <div class="stay">
+        <figure><img src="img/caravans.jpg" alt="Caravans lit up at night" loading="lazy"></figure>
+        <div><h3>Caravans</h3><p>Two queen beds, own bathroom, outdoor dining table. The one the kids will lobby for.</p></div>
+      </div>
+      <div class="stay">
+        <figure><img src="img/cottage.jpg" alt="Four bedroom wooden cottage" loading="lazy"></figure>
+        <div><h3>Four-bedroom cottage</h3><p>Four bedrooms, four bathrooms, a dining table for twelve. For anyone who would rather have walls.</p></div>
+      </div>
+    </div>
+    <div class="price">
+      <strong>Roughly ฿2,200 to 4,500 per night</strong>
+      <span>Depending on the unit and the night. We confirm exact prices when we book.</span>
+    </div>
+  </div>
+</section>
+
+<section class="plan">
+  <div class="wrap">
+    <div class="eyebrow">The plan</div>
+    <h2>There is no plan. That is the plan.</h2>
+    <p class="lead">No sessions, no schedule, no name tags. Come late or leave early if you need to.</p>
+    <div class="days">
+      <div class="day"><small>Thu 15 Oct</small><h3>Arrive and exhale</h3><p>Check in, let the kids find each other, first fire of the trip.</p></div>
+      <div class="day"><small>Fri 16 to Sun 18 Oct</small><h3>Do as little or as much as you like</h3><p>Karts, paddleboards and bikes on site. Khao Yai National Park is close by for anyone who wants a day out.</p></div>
+      <div class="day"><small>Mon 19 Oct</small><h3>Roll down to Bangkok</h3><p>Slow breakfast, then a 2.5 hour drive with days to spare before DCBKK.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="join" id="join">
+  <img src="img/aerial.jpg" alt="Aerial view of the resort" loading="lazy">
+  <div class="wrap">
+    <h2>Want in?</h2>
+    <p>Message Simon or Khwan on WhatsApp. The earlier we know numbers, the easier it is to keep everyone next to each other.</p>
+    <div class="steps">
+      <div class="step"><b>1</b>Tell us your dates and how many of you are coming.</div>
+      <div class="step"><b>2</b>We book the tents together so everyone ends up side by side.</div>
+      <div class="step"><b>3</b>Pack for the outdoors. See you by the fire.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>DC Family Retreat · Khao Yai · 15 to 19 October 2026</span>
+    <span><a href="https://www.google.com/maps/search/?api=1&query=The+Wild+Khao+Yai+Pak+Chong&query_place_id=ChIJtbc58cvRHTERXaHufuXdd0A">The Wild Khao Yai on Google Maps</a> · Photos: The Wild Khao Yai</span>
+  </div>
+</footer>
+
+</body>
+</html>
